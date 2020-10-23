@@ -223,10 +223,8 @@ void loseSequence() {
   //play the 1Up noise
   tone(buzzerPin, 130, 250);   //E6
   delay(275);
-  tone(buzzerPin, 73, 250);   //G6
+  tone(buzzerPin, 130, 300);   //E6
   delay(275);
-  tone(buzzerPin, 65, 150);   //E7
-  delay(175);
   tone(buzzerPin, 98, 500);   //C7
   delay(500);
 
