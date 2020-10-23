@@ -16,7 +16,7 @@ int button[] = {2, 4, 6, 8};  //red is button[0], yellow is button[1], green is 
 int led[] = {3, 5, 7, 9};     //red is led[0], yellow is led[1], green is led[2], blue is led[3]
 int tones[] = {262, 330, 392, 494};   //tones to play with each button (c, e, g, b)
 
-int roundsToWin = 10;         //number of rounds the player has to play before they win the game (the array can only hold up to 16 rounds)
+int roundsToWin = 12;         //number of rounds the player has to play before they win the game (the array can only hold up to 16 rounds)
 int buttonSequence[16];       //make an array of numbers that will be the sequence that the player needs to remember
 
 int buzzerPin = 10;           //pin that the buzzer is connected to
@@ -26,7 +26,7 @@ int roundCounter = 1;         //keeps track of what round the player is on
 
 
 long startTime = 0;           //timer variable for time limit on button press
-long timeLimit = 2000;        //time limit to hit a button
+long timeLimit = 1500;        //time limit to hit a button
 
 boolean gameStarted = false;      //variable to tell the game whether or not to play the start sequence
 
