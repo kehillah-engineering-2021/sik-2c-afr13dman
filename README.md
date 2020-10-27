@@ -63,11 +63,7 @@ Then the program sets button pins to input_pullup and LED pins to output. The pr
 ```C
 for (int i = 0; i <= roundCounter; i++)
 ```
-Then the start time is recorded:
-```C
-startTime = millis();
-```
-Then while the gameStarted is True, the loop runs making sure the player pressed the right button within the time limit. If both are done for the whole sequence (ie. player correctly coppied the sequence), then the code will preceed to the next round. If the player doesn't click a button or presses the wrong one, the loss song is played, the while and for loop break, and the game is resarted. If the user exceeds the time limit, then the loss song plays, the while and for loop break, and the game is restarted.
+Then the start time is recorded:`startTime = millis();`. Then while the gameStarted is True, the loop runs making sure the player pressed the right button within the time limit. If both are done for the whole sequence (ie. player correctly coppied the sequence), then the code will preceed to the next round. If the player doesn't click a button or presses the wrong one, the loss song is played, the while and for loop break, and the game is resarted. If the user exceeds the time limit, then the loss song plays, the while and for loop break, and the game is restarted.
 ```C
     while (gameStarted == true) { //loop until the player presses a button or the time limit is up (the time limit check is in an if statement)
 
