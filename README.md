@@ -6,6 +6,8 @@ The program is compatible with an Arduino Uno board which was set up using a Spa
 You will need:
 ![Items needed](images/2Cparts.png)
 
+.
+
 Following the instructions, the basic board set up should look like this:
 ![Arduino Board](images/board-template.jpg)
 
