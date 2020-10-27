@@ -1,12 +1,13 @@
 # Simon Says
 
-### Running the Program
-The program is compatible with an Arduino Uno board which was set up using a SparkFun Inventor's Kit. Following the instructions, the basic board set up should look like this: 
-
-![Arduino Board](images/board-template.jpg)
+## Running the Program
+The program is compatible with an Arduino Uno board which was set up using a SparkFun Inventor's Kit.
 
 You will need:
 ![Items needed](images/2Cparts.png)
+
+Following the instructions, the basic board set up should look like this:
+![Arduino Board](images/board-template.jpg)
 
 Note that the buzzer is polarized and the positive end should connect to ground (ie. be inserted in row 1).
 
@@ -16,7 +17,7 @@ To run the code click on the upload button on the top left corner (second to lef
 
 ![Upload Button](images/upload-button.png)
 
-### The Concepts
+## The Concepts
 
 **For Loops**
 
@@ -32,13 +33,13 @@ The for loop takes three parameters in the brackets all separated by semicolons.
 
 The millis() command counts how many milliseconds have passed since the RedBoard was last powered. Storing the time when an event happens and then subtracting the current time, allows one to measure the number of milliseconds (and thus seconds) that have passed.
 
-### The Program
+## The Program
 The program is designed to allow a user to play Simon Says. When the code starts, it flashes all LEDs and plays the start song. After a few seconds, the first light in the pattern will flash. The user must correctly press the corresponding colored button to move on to the next round and add another color to the pattern sequence. If the user makes a mistake, the loss song will play. After 12 rounds, if the user has made no mistakes, the win song will play. To replay, the user must press any button to start a new game.
 
 All melodies are played through the buzzer, and the potentiometer once again controls the volumne of the sound. The closer to the top left the arrow points, the louder the volumne, and the closer to the bottom left, the quieter the volumne.
 
 ### The Code
-The program begins by setting base line variables for the buttons, LEDS, tones, # of rounds, time limit, etc.
+The program begins by setting base line variables for the buttons, LEDS, tones, # of rounds, time limit, etc. The tones of the buttons can be changed as well as the rounds to win and the time limit. If the round number is increased to be arger than 16, the size of the array will need to be increased.
 ```C
 int button[] = {2, 4, 6, 8};  //red is button[0], yellow is button[1], green is button[2], blue is button[3]
 int led[] = {3, 5, 7, 9};     //red is led[0], yellow is led[1], green is led[2], blue is led[3]
@@ -93,3 +94,5 @@ Then the start time is recorded:`startTime = millis();`. Then while the gameStar
         break;                                //when the program gets back from the lose sequence, break the while loop so that the game can start over
       }
 ```
+
+Additionally, the songs that play to start the game and when the player losses or wins can also be changed.
